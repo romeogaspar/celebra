@@ -1,0 +1,268 @@
+/* ── MAIN ── */
+.main {
+  min-height: 100vh;
+  background: #FAF8F4;
+  padding: 6rem 2rem 4rem;
+}
+
+.inner {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ── HEADER ── */
+.title {
+  font-family: Georgia, serif;
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.02em;
+}
+
+.stepLabel {
+  color: #8A8480;
+  font-size: 0.85rem;
+  margin-bottom: 2rem;
+}
+
+/* ── STEP INDICATOR ── */
+.stepBar {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 2.5rem;
+}
+
+.stepBarItem {
+  height: 3px;
+  flex: 1;
+  background: #D4D0CC;
+  transition: background 0.3s;
+}
+
+.stepBarItemActive {
+  background: #C9A96E;
+}
+
+/* ── PACKAGES ── */
+.packageCard {
+  border: 1px solid #D4D0CC;
+  background: white;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 0.75rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.packageCard:hover {
+  border-color: #C9A96E;
+}
+
+.packageCardActive {
+  border-color: #C9A96E;
+  background: rgba(201,169,110,0.06);
+}
+
+.packageCardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.3rem;
+}
+
+.packageName {
+  font-family: Georgia, serif;
+  font-size: 1.05rem;
+  font-weight: 400;
+}
+
+.packagePrice {
+  color: #C9A96E;
+  font-size: 0.85rem;
+}
+
+.packageDesc {
+  color: #8A8480;
+  font-size: 0.82rem;
+  line-height: 1.6;
+}
+
+/* ── FORM FIELDS ── */
+.fieldWrap {
+  margin-bottom: 1.25rem;
+}
+
+.fieldLabel {
+  display: block;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #8A8480;
+  margin-bottom: 0.5rem;
+}
+
+.fieldInput {
+  width: 100%;
+  background: white;
+  border: 1px solid #D4D0CC;
+  padding: 11px 14px;
+  font-size: 0.9rem;
+  font-family: inherit;
+  outline: none;
+  color: #2A2520;
+  transition: border-color 0.2s;
+}
+
+.fieldInput:focus {
+  border-color: #C9A96E;
+}
+
+.fieldTextarea {
+  width: 100%;
+  background: white;
+  border: 1px solid #D4D0CC;
+  padding: 11px 14px;
+  font-size: 0.9rem;
+  font-family: inherit;
+  outline: none;
+  color: #2A2520;
+  transition: border-color 0.2s;
+  height: 100px;
+  resize: vertical;
+}
+
+.fieldTextarea:focus {
+  border-color: #C9A96E;
+}
+
+.fieldHint {
+  font-size: 0.75rem;
+  color: #8A8480;
+  margin-top: 0.4rem;
+}
+
+/* ── SUMMARY BOX ── */
+.summary {
+  background: rgba(201,169,110,0.07);
+  border: 1px solid rgba(201,169,110,0.2);
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.85rem;
+  color: #8A8480;
+}
+
+.summaryTitle {
+  color: #8A6930;
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* ── BUTTONS ── */
+.btnRow {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.btnPrimary {
+  background: #2A2520;
+  color: #FAF8F4;
+  padding: 13px 32px;
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  flex: 1;
+  transition: background 0.2s;
+}
+
+.btnPrimary:hover {
+  background: #8A6930;
+}
+
+.btnPrimary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btnOutline {
+  background: transparent;
+  color: #2A2520;
+  padding: 13px 32px;
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border: 1px solid #D4D0CC;
+  cursor: pointer;
+  font-family: inherit;
+  transition: border-color 0.2s;
+}
+
+.btnOutline:hover {
+  border-color: #C9A96E;
+}
+
+.btnFull {
+  width: 100%;
+  background: #2A2520;
+  color: #FAF8F4;
+  padding: 13px 32px;
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  margin-top: 2rem;
+  transition: background 0.2s;
+}
+
+.btnFull:hover {
+  background: #8A6930;
+}
+
+/* ── SUCCESS ── */
+.success {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #FAF8F4;
+}
+
+.successInner {
+  text-align: center;
+  padding: 3rem;
+}
+
+.successIcon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.successTitle {
+  font-family: Georgia, serif;
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.successText {
+  color: #8A8480;
+  max-width: 360px;
+  margin: 0 auto 2rem;
+  line-height: 1.7;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 560px) {
+  .main { padding: 5rem 1.25rem 3rem; }
+  .title { font-size: 1.8rem; }
+  .btnRow { flex-direction: column; }
+}
