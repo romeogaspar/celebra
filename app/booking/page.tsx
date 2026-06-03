@@ -1,6 +1,12 @@
 "use client";
 import { useState, useEffect } from "react";
 import styles from "./Booking.module.css";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title:       "Book an Event — Celebra Events",
+  description: "Plan your perfect wedding, birthday, or private event with Celebra. Choose your package and submit your enquiry in minutes.",
+};
 
 const PACKAGES = [
   { name: "Classic",   price: "From ₱28,000", desc: "4hr coverage, basic décor, coordination" },
