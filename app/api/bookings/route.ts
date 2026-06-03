@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { createBooking, getAllBookings } from "@/lib/queries";
+import { sendBookingNotification } from "@/lib/email";
 
 export async function GET() {
   try {
@@ -26,8 +27,22 @@ export async function POST(req: Request) {
       status:     "pending",
     });
 
-    // email temporarily disabled for testing
-    // await sendBookingNotification({...});
+    // Send email separately — don't fail the booking if email fails
+    try {
+      await sendBookingNotification({
+        clientName: body.clientName,
+        email:      body.email,
+        phone:      body.phone,
+        eventType:  body.eventType,
+        package:    body.package,
+        eventDate:  body.eventDate,
+        guests:     body.guests,
+        message:    body.message,
+      });
+    } catch (emailError) {
+      console.error("Email failed:", emailError);
+      // booking still succeeds even if email fails
+    }
 
     return NextResponse.json(booking);
   } catch (error) {
