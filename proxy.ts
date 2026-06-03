@@ -1,10 +1,10 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
-export function middleware(req: NextRequest) {
+export function proxy(req: NextRequest) {
   const { pathname } = req.nextUrl;
 
-  if (pathname.startsWith("/admin")) {
+  if (pathname.startsWith("/admin") && !pathname.startsWith("/admin-login")) {
     const auth = req.cookies.get("admin_auth")?.value;
 
     if (auth !== process.env.ADMIN_SECRET) {
